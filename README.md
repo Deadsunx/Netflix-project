@@ -85,17 +85,24 @@ much less separable signal than the genre labels imply.
 - Drop the 80/20 split. It is in the notebook, but for unsupervised clustering
   on the full dataset it does no work.
 
-## Known issues in the notebooks
+## Notes on the notebooks
 
-Kept deliberately, so the record matches what was actually run:
+Four commentary cells in `02-clustering.ipynb` originally carried templated
+conclusions that the outputs printed directly above them contradict — that
+K-Means scored highest, that `k-means++` beat random initialisation, that Ward
+linkage performed best, that DBSCAN labelled most points as noise. None of
+those hold against the printed numbers, and all four have been rewritten to
+say what the run actually produced.
 
-- Several of the templated commentary cells in `02-clustering.ipynb` state
-  conclusions that the cell outputs directly contradict — that K-Means scored
-  highest, that `k-means++` beat random initialisation, that Ward linkage
-  performed best. None of those hold against the printed numbers. The tables
-  above supersede them; the cells are left in place rather than quietly edited,
-  since the outputs are the evidence.
-- The final comparison chart omits DBSCAN and both tuned variants.
+**Only markdown was edited.** No code cell and no stored output has been
+touched — those are the evidence, and changing them after the fact is the one
+thing that would make this record worthless. Anything in the prose can be
+checked against the output cell immediately above it.
+
+One known gap remains: the final comparison chart in the model-comparison cell
+plots only K-Means, K-Means (tuned) and Agglomerative — it omits DBSCAN and the
+tuned variants. Correcting it would mean re-running the notebook, so the
+results table above is the complete comparison instead.
 
 ## Running it
 
